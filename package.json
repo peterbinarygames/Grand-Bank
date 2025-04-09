@@ -1,5 +1,5 @@
 {
-  "name": "cbl-banking-app",
+  "name": "grand-banking-app",
   "version": "1.0.0",
   "description": "A simple banking application with Express.js",
   "main": "server.js",
@@ -17,17 +17,13 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
-    "body-parser": "^1.20.2",
-    "cors": "^2.8.5",
-    "helmet": "^7.1.0",
-    "morgan": "^1.10.0"
+    "body-parser": "^1.20.2"
   },
   "devDependencies": {
-    "nodemon": "^3.1.0",
-    "jest": "^29.7.0",
-    "supertest": "^6.3.3"
+    "nodemon": "^3.0.2",
+    "jest": "^29.7.0"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=16.0.0"
   }
 }
