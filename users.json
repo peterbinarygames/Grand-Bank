@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "name": "Admin",
+    "email": "admin@grand.com",
+    "password": "admin123",
+    "balance": 50000000000000000,
+    "isAdmin": true,
+    "accountNumber": "1234567890",
+    "status": "active",
+    "createdAt": "2025-04-09T01:27:37.563Z"
+  }
+]
