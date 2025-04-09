@@ -222,8 +222,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (userAvatar) userAvatar.textContent = initials
     if (profileInitial) profileInitial.textContent = initials
 
-    // Update balance
-    if (balance) balance.textContent = `$${user.balance} USD`
+    // Update balance with proper formatting
+    if (balance) balance.textContent = formatCurrency(user.balance)
 
     // Update account number
     if (accountNumber) accountNumber.textContent = user.accountNumber
@@ -1297,11 +1297,13 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
-  // Helper functions
+  // Fix the formatCurrency function to ensure it includes commas
   const formatCurrency = (amount) => {
     return new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
     }).format(amount)
   }
 
@@ -1622,7 +1624,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Update sidebar with user data
+  // Update the updateSidebar function to properly format the balance
   function updateSidebar(user) {
     if (!user) return
 
@@ -1633,7 +1635,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (sidebarUsername) sidebarUsername.textContent = user.name
     if (sidebarAccountNumber) sidebarAccountNumber.textContent = `Acc No: ${user.accountNumber}`
-    if (sidebarBalance) sidebarBalance.textContent = `${formatCurrency(user.balance)}`
+    if (sidebarBalance) sidebarBalance.textContent = formatCurrency(user.balance)
 
     // Set avatar initials
     if (sidebarAvatar) {
@@ -1787,6 +1789,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const comingSoonTitle = document.getElementById("coming-soon-title")
   const comingSoonMessage = document.getElementById("coming-soon-message")
 
+  // Update the showComingSoonModal function to properly format the amount
   function showComingSoonModal(title, message) {
     if (comingSoonTitle) comingSoonTitle.textContent = title || "Feature Coming Soon"
     if (comingSoonMessage)

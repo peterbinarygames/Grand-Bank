@@ -136,6 +136,43 @@ body {
   color: #888;
 }
 
+/* Add styles for the auth header */
+.auth-header {
+  background-color: #0066ff;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.auth-header .logo h1 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.auth-links {
+  display: flex;
+  gap: 20px;
+}
+
+.auth-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: opacity 0.3s;
+}
+
+.auth-links a:hover {
+  opacity: 0.8;
+}
+
 /* Login & Register Styles */
 .login-container,
 .register-container {
@@ -144,10 +181,13 @@ body {
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #00a1e4, #00bfff);
-  padding-top: 70px;
+  padding-top: 80px;
   padding-bottom: 70px;
 }
 
+/* Adjust login and register containers to account for header */
+
+/* Ensure the login and register forms have proper spacing */
 .login-form,
 .register-form {
   background-color: white;
@@ -156,6 +196,7 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   width: 90%;
   max-width: 400px;
+  margin-top: 20px;
 }
 
 .login-form h1,
@@ -1092,40 +1133,6 @@ main {
 }
 
 /* Add styles for login/register header and footer */
-.auth-header {
-  background-color: #0099cc;
-  color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-}
-
-.auth-header .logo h1 {
-  font-size: 1.5rem;
-  margin: 0;
-}
-
-.auth-links {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.auth-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.auth-links a:hover {
-  text-decoration: underline;
-}
-
 .auth-footer {
   background-color: #f5f5f5;
   color: #666;
